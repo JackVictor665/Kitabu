@@ -1,0 +1,5 @@
+- `[ ]` Phase 1: Configure build.gradle.kts and dependencies (Room, KSP, Navigation Compose, Lifecycle ViewModel Compose)
+- `[ ]` Phase 2: Implement Data Layer (Enums, Entities, Converters, DAOs, Relations, AppDatabase with pre-population)
+- `[ ]` Phase 3: Implement Repository and ViewModels (LibraryRepository, CatalogViewModel, DashboardViewModel)
+- `[ ]` Phase 4: Implement UI Screens & Navigation (CatalogScreen, DashboardScreen, Navigation, MainActivity)
+- `[ ]` Phase 5: Build Verification and Sanity Check
