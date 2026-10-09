@@ -30,11 +30,8 @@ The database is pre-populated with sample books on first launch. If you change a
 |:---:|:---:|:---:|
 | ![Catalogue](docs/screenshots/catalogue.png) | ![Reserve](docs/screenshots/reserve.png) | ![Dashboard](docs/screenshots/dashboard.png) |
 
-*Add your own screenshots or GIFs of the Create, Read, Update and Delete flows to `docs/screenshots/`.*
-
 ## 🗂️ Extras
 
 A SQL reference of the schema and CRUD queries is in [`docs/Kitabu_MADB372_SF1.sql`](docs/Kitabu_MADB372_SF1.sql). It is for documentation only, because Room creates the real database.
 
 ---
-*Built by [Your Name] · MADB372 SF1 · STADIO School of Information Technology*
