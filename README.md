@@ -27,7 +27,7 @@ The database is pre-populated with sample books on first launch. If you change a
 
 | Catalogue | Reserve | Dashboard |
 |:---:|:---:|:---:|
-| ![Catalogue](docs/screenshots/catalogue.png) | ![Reserve](docs/screenshots/reserve.png) | ![Dashboard](docs/screenshots/dashboard.png) |
+| ![Catalogue](docs/screenshots/catalog.png) | ![Reserve](docs/screenshots/Book_pop_up.png) | ![Dashboard](docs/screenshots/Dashboard.png) |
 
 *Add your own screenshots or GIFs of the Create, Read, Update and Delete flows to `docs/screenshots/`.*
 
