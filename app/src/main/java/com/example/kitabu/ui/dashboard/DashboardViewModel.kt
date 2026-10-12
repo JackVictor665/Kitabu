@@ -22,7 +22,7 @@ class DashboardViewModel(private val repository: LibraryRepository) : ViewModel(
     fun renewRental(bookingId: Long, currentDeadline: Long, extraDays: Int = 7) {
         viewModelScope.launch {
             val newDeadline = currentDeadline + (extraDays * 24 * 60 * 60 * 1000L)
-            repository.extendRentalPeriod(bookingId, newDeadline)
+            repository.extendRentalPeriod(bookingId, currentDeadline, newDeadline)
         }
     }
 
@@ -34,8 +34,7 @@ class DashboardViewModel(private val repository: LibraryRepository) : ViewModel(
 
     fun cancelBooking(bookingId: Long, bookId: Int) {
         viewModelScope.launch {
-            repository.cancelPendingBooking(bookingId)
-            repository.updateBookAvailability(bookId, true)
+            repository.cancelPendingBooking(bookingId, bookId)
         }
     }
 

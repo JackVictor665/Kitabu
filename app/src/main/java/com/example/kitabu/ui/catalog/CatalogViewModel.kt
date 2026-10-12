@@ -5,8 +5,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.kitabu.data.LibraryRepository
 import com.example.kitabu.data.local.BookEntity
-import com.example.kitabu.data.local.BookingEntity
-import com.example.kitabu.data.local.BookingStatus
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -38,17 +36,7 @@ class CatalogViewModel(private val repository: LibraryRepository) : ViewModel() 
 
     fun reserveBook(book: BookEntity, userName: String, rentalDays: Int) {
         viewModelScope.launch {
-            val currentTime = System.currentTimeMillis()
-            val deadlineTime = currentTime + (rentalDays * 24 * 60 * 60 * 1000L)
-            val booking = BookingEntity(
-                bookOwnerId = book.bookId,
-                userName = userName.ifBlank { "Guest User" },
-                bookingDate = currentTime,
-                returnDeadline = deadlineTime,
-                status = BookingStatus.ACTIVE
-            )
-            repository.insertBooking(booking)
-            repository.updateBookAvailability(book.bookId, false)
+            repository.reserveBook(book, userName, rentalDays)
         }
     }
 
